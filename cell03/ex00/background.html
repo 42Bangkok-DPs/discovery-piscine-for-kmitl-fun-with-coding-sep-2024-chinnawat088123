@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color</title>
+    <link rel="stylesheet" href="background.css">
+</head>
+<body>
+    <div class="container">
+        <button class="change-background" onclick="changeBackgroundColor()">Change Background</button>
+    </div>
+
+    <script>
+        // ฟังก์ชันสำหรับสุ่มสีพื้นหลัง
+        function changeBackgroundColor() {
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); // สุ่มสี Hex
+            document.body.style.backgroundColor = randomColor; // เปลี่ยนสีพื้นหลัง
+        }
+    </script>
+</body>
+</html>
