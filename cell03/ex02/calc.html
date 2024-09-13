@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            margin: 40px;
+        }
+        .calculator {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <form id="calcForm">
+            <input type="text" id="leftNumber" placeholder="Enter left number" required>
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="rightNumber" placeholder="Enter right number" required>
+            <input type="submit" value="Try me!">
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('calcForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const leftNumber = parseFloat(document.getElementById('leftNumber').value);
+            const rightNumber = parseFloat(document.getElementById('rightNumber').value);
+            const operator = document.getElementById('operator').value;
+
+            if (isNaN(leftNumber) || isNaN(rightNumber) || leftNumber < 0 || rightNumber < 0) {
+                alert('Error :(');
+                return;
+            }
+
+            let result;
+
+            if ((operator === '/' && rightNumber === 0) || (operator === '%' && rightNumber === 0)) {
+                alert("It's over 9000!!");
+                console.log("It's over 9000!!");
+                return;
+            }
+
+            switch (operator) {
+                case '+':
+                    result = leftNumber + rightNumber;
+                    break;
+                case '-':
+                    result = leftNumber - rightNumber;
+                    break;
+                case '*':
+                    result = leftNumber * rightNumber;
+                    break;
+                case '/':
+                    result = leftNumber / rightNumber;
+                    break;
+                case '%':
+                    result = leftNumber % rightNumber;
+                    break;
+                default:
+                    alert('Invalid operator');
+                    return;
+            }
+
+      
+            alert('Result: ' + result);
+            console.log('Result: ' + result);
+        });
+
+        setInterval(function() {
+            alert('Please, use me....');
+        }, 30000);
+    </script>
+
+</body>
+</html>
