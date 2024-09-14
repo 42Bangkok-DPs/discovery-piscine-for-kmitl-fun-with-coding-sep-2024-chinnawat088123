@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(/Rush/resources/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+}
+
+
+.background {
+    background-color: rgba(0, 0, 0, 0.8); 
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 20px; 
+}
+
+header {
+    position: relative; 
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px 10px 0 0;
+}
+
+.header h1 {
+    font-size: 2em;
+    margin: 0; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    padding: 10px; 
+    
+}
+
+.header nav {
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
+}
+
+.header a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+    text-decoration: none; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.Member {
+    background-color: #337a7e; 
+    padding: 5px 5px 20px 5px;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    width: 40%;
+}
+
+.Member img {
+    width: 80%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.Member h3 {
+    margin-top: 20px;
+    color: #fff;
+}
+
+h4 {
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    color: #337a7e; 
+
+}
+
+.data{
+    margin-top: 8%;
+    margin-left: 10px;
+}
+
+.data p2 {
+   font-size: 26px;
+}
+
+.data p4 {
+    color: #4ABDD8;
+ }
+
+ .data p4 {
+    color: #4ABDD8;
+ }
+
+ .data p5, p7 {
+    color: #C0EDA5;
+ }
+
+ .data p9 {
+    text-decoration: underline;
+ }
+
+ .logo1{
+    width: 26px;
+ }
+
+ .logo2{
+    width: 25px;
+    margin-left: 10px;
+ }
+
+ .leo{
+    position: relative;
+    width: 25%;
+ }
+
+@media (max-width: 768px) {
+    body {
+        background: url(/Rush/resources/background.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .Member {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

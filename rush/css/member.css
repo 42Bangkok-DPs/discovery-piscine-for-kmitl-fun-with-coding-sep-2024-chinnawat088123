@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(/Rush/resources/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.background {
+    background-color: rgba(0, 0, 0, 0.8); 
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 20px;
+}
+
+.header {
+    position: relative; 
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0; 
+    position: absolute; 
+    top: 0; 
+    left: 10px; 
+    padding: 10px;
+}
+
+.header nav {
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
+}
+
+.header a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header a:hover {
+    color: #337a7e;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.information {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.member {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.intro {
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #4ABDD8;
+    font-weight: bold;
+}
+
+.info p {
+    margin: 10px 0;
+    color: #C0EDA5;
+    margin-left: 20px;
+}
+
+.info p1 {
+    margin: 10px 0;
+    color: white;
+}
+
+.social-links img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.profile-picture {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 300px;
+    
+    margin: 0 auto; 
+}
+
+h4, h5 {
+    margin: 10px 0;
+    color: #C0EDA5;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: url(/Rush/resources/background.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .information {
+        padding-right: 0;
+    }
+
+    .right-column {
+        margin-top: 20px;
+    }
+}
